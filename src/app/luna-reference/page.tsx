@@ -11,18 +11,15 @@ import {
   CreditCard,
   Edit3,
   ExternalLink,
-  Eye,
   FileText,
   Gift,
   Heart,
-  HelpCircle,
   Home,
   ImagePlus,
-  Instagram,
+  Camera,
   Layers3,
   Link2,
   ListFilter,
-  LockKeyhole,
   LogOut,
   Mail,
   MapPin,
@@ -31,10 +28,8 @@ import {
   Package,
   PackageCheck,
   Palette,
-  Percent,
   Phone,
   ReceiptText,
-  RefreshCw,
   Search,
   Settings,
   ShieldCheck,
@@ -44,9 +39,7 @@ import {
   Star,
   Store,
   Tags,
-  Trash2,
   Truck,
-  User,
   Users,
 } from "lucide-react";
 
@@ -392,20 +385,6 @@ const adminPanelItems: Feature[] = [
   { title: "اعلان‌های ادمین", icon: Bell },
 ];
 
-const productManagementItems = [
-  "افزودن محصول دستی",
-  "ویرایش محصول",
-  "حذف محصول",
-  "افزودن عکس محصول",
-  "تعیین برند",
-  "تعیین دسته‌بندی",
-  "تعیین قیمت تومان",
-  "تعیین قیمت لیر در صورت نیاز",
-  "تعیین وزن محصول",
-  "تعیین موجودی",
-  "تعیین تخفیف",
-  "فعال یا غیرفعال کردن محصول",
-];
 
 const manualProductFormItems = [
   "عنوان محصول",
@@ -481,9 +460,13 @@ const bannerManagementItems = [
   "نمایش بنر در صفحه اصلی یا بخش‌های مشخص سایت",
 ];
 
-const adminSidebarItems = [
+
+
+const adminMenuStructureItems = [
   "داشبورد",
   "محصولات",
+  "افزودن محصول دستی",
+  "وارد کردن محصول از Trendyol",
   "دسته‌بندی‌ها",
   "برندها",
   "اندازه‌ها / سایزها",
@@ -495,101 +478,57 @@ const adminSidebarItems = [
   "بلاگ",
   "بنرها",
   "کاربران",
+  "نقش‌ها و دسترسی‌ها",
+  "تنظیمات فروشگاه",
   "بازگشت به صفحه اصلی",
   "خروج از حساب",
 ];
 
-
-const trendyolItems = [
-  "وارد کردن لینک محصول Trendyol",
-  "دریافت عنوان محصول",
-  "دریافت عکس‌ها",
-  "دریافت توضیحات",
-  "دریافت برند",
-  "دریافت قیمت",
-  "تبدیل قیمت لیر به تومان",
-  "امکان ویرایش اطلاعات قبل از ذخیره",
-  "امکان جایگزینی محصول",
+const adminCatalogStructureItems = [
+  "مدیریت محصولات",
+  "مدیریت دسته‌بندی‌ها",
+  "مدیریت برندها",
+  "مدیریت فیلترها",
+  "مدیریت اندازه‌ها به عنوان بخشی از فیلترها",
+  "مدیریت بنرهای سایت",
 ];
 
-const categoryBrandItems = [
-  "افزودن دسته‌بندی جدید",
-  "ویرایش دسته‌بندی",
-  "حذف دسته‌بندی",
-  "فعال یا غیرفعال کردن دسته‌بندی",
-  "افزودن برند جدید",
-  "ویرایش برند",
-  "حذف برند",
-  "فعال یا غیرفعال کردن برند",
-  "بعد از افزودن برند یا دسته‌بندی، باید بلافاصله در فرم افزودن محصول دیده شود",
+const adminSalesStructureItems = [
+  "مدیریت سفارش‌ها",
+  "مدیریت سفارش‌های داخلی و خارجی",
+  "مدیریت وضعیت سفارش‌ها",
+  "مدیریت تخفیف‌ها",
+  "مدیریت تراکنش‌ها",
+  "گزارش درآمد",
 ];
 
-const adminFilterItems = [
-  "رنگ",
-  "سایز",
-  "جنس",
-  "قیمت",
-  "امتیاز",
-  "موجودی",
-  "تخفیف‌دارها",
-  "زیرمجموعه دسته‌بندی",
-  "بخش جداگانه اندازه لازم نیست؛ اندازه باید یکی از فیلترها باشد",
+const adminContentStructureItems = [
+  "مدیریت سوالات و پاسخ‌ها",
+  "مدیریت نظرات کاربران",
+  "مدیریت امتیازها",
+  "مدیریت بلاگ",
+  "مدیریت صفحات محتوایی سایت",
 ];
 
-const adminOrderItems = [
-  "مشاهده همه سفارش‌ها",
-  "جستجوی سفارش",
-  "فیلتر بر اساس تاریخ",
-  "فیلتر بر اساس وضعیت",
-  "فیلتر بر اساس مشتری",
-  "فیلتر بر اساس مبلغ",
-  "تغییر وضعیت سفارش",
-  "ثبت کد رهگیری ارسال داخل ایران",
-  "دانلود یا مشاهده فاکتور",
-  "مدیریت مرجوعی",
-  "گزارش سفارش‌ها",
-  "جستجوی سفارش‌ها فقط با Enter یا دکمه جستجو انجام شود",
+const adminPeopleStructureItems = [
+  "مدیریت کاربران",
+  "مشاهده پروفایل کاربران",
+  "مشاهده سفارش‌های هر کاربر",
+  "مدیریت نقش‌ها",
+  "مدیریت سطح دسترسی مدیر و پرسنل",
 ];
 
-const discountItems = [
-  "تخفیف امروز",
-  "تخفیف محصول",
-  "کد تخفیف",
-  "تاریخ شروع",
-  "تاریخ پایان",
-  "درصد تخفیف",
-  "فعال یا غیرفعال بودن تخفیف",
+const adminSystemStructureItems = [
+  "تنظیمات نرخ ارز",
+  "تنظیم درصد سود و کارمزد",
+  "تنظیم هزینه ارسال و کارگو",
+  "تنظیم اطلاعات تماس",
+  "تنظیم متن فوتر",
+  "تنظیم شعار برند",
 ];
 
-const qaReviewItems = [
-  "مشاهده پرسش‌های کاربران",
-  "پاسخ دادن به پرسش‌ها",
-  "تأیید یا رد پرسش",
-  "مشاهده نظرات",
-  "تأیید یا رد نظر",
-  "مدیریت امتیازهای کاربران",
-  "ارسال اعلان بعد از پاسخ به سؤال",
-];
 
-const blogItems = [
-  "افزودن مقاله",
-  "ویرایش مقاله",
-  "حذف مقاله",
-  "تصویر شاخص",
-  "عنوان مقاله",
-  "متن مقاله",
-  "دسته‌بندی مقاله",
-  "توضیحات سئو",
-  "انتشار یا پیش‌نویس",
-  "آپلود Word لازم نیست؛ متن آماده داخل ادیتور کپی می‌شود",
-];
 
-const roleItems = [
-  "ادمین اصلی: دسترسی کامل",
-  "مدیر: دسترسی به بخش‌هایی که ادمین مشخص می‌کند",
-  "پرسنل: دسترسی محدودتر",
-  "کاربر عادی: فقط پنل کاربر",
-];
 
 const storeSettingsItems = [
   "نرخ لیر",
@@ -643,28 +582,13 @@ const bugItems = [
   "درآمد فقط بعد از پرداخت‌شده یا تأییدشده بودن سفارش حساب شود",
   "در صورت لغو یا مرجوعی، درآمد باید اصلاح شود",
   "جستجوی سفارش‌ها در پنل ادمین نباید وسط تایپ کاربر را قطع کند",
-  "کاربر مهمان باید بتواند مسیر ثبت پرسش را واضح ببیند",
-"فرم افزودن محصول دستی باید همه فیلدهای لازم مثل قیمت، موجودی، برند، دسته‌بندی، تصویر، گالری، منبع، لینک منبع، ویژگی‌ها و وزن محصول را داشته باشد",
-"در وارد کردن محصول از Trendyol اگر ترجمه انجام نشد، متن اصلی محصول نمایش داده شود و خطا واضح باشد",
-"سیستم باید تشخیص دهد محصول واردشده از Trendyol مرتبط با فضای اتاق خواب و لونا هست یا نه",
-"دسته‌بندی‌های پیش‌فرض نامرتبط مثل اسباب‌بازی، الکترونیک، خودرو و کتاب باید برای سایت لونا حذف یا اصلاح شوند",
-"پنل ادمین باید به جای Luna Bedroom Admin بهتر است با نام لونا / LUNA نمایش داده شود",
-"رنگ نارنجی شدید فعلی پنل ادمین باید با رنگ‌های گرم و Soft Premium لونا جایگزین شود",
-
+  "فرم افزودن محصول دستی باید همه فیلدهای لازم مثل قیمت، موجودی، برند، دسته‌بندی، تصویر، گالری، منبع، لینک منبع، ویژگی‌ها و وزن محصول را داشته باشد",
+  "در وارد کردن محصول از Trendyol اگر ترجمه انجام نشد، متن اصلی محصول نمایش داده شود و خطا واضح باشد",
+  "سیستم باید تشخیص دهد محصول واردشده از Trendyol مرتبط با فضای اتاق خواب و لونا هست یا نه",
 
 ];
 
-const adminDashboardItems = [
-  "تعداد سفارش‌های امروز",
-  "تعداد سفارش‌های در انتظار تأیید",
-  "تعداد سفارش‌های خارجی",
-  "درآمد پرداخت‌شده",
-  "تعداد محصولات فعال",
-  "تعداد محصولات ناموجود",
-  "تعداد پرسش‌های بدون پاسخ",
-  "تعداد نظرات در انتظار تأیید",
-  "اعلان‌های مهم ادمین",
-];
+
 
 const adminProductDetailItems = [
   "مدیریت گالری تصاویر محصول",
@@ -1268,90 +1192,71 @@ export default function LunaReferencePage() {
         <FeatureGrid items={adminPanelItems} />
       </section>
 
-      <section className="luna-ref-section">
-        <SectionHeader eyebrow="13" title="مدیریت‌های اصلی پنل ادمین" />
 
-        <div className="luna-ref-three-col">
-          <MiniPanel icon={Package} title="مدیریت محصولات">
-            <CheckList items={productManagementItems} />
-          </MiniPanel>
-
-          <MiniPanel icon={Edit3} title="افزودن محصول دستی">
-             <CheckList items={manualProductFormItems} />
-          </MiniPanel>
-
-            <MiniPanel icon={ListFilter} title="لیست محصولات در پنل ادمین">
-              <CheckList items={productListAdminItems} />
-            </MiniPanel>
-
-          <MiniPanel icon={ExternalLink} title="افزودن محصول از Trendyol">
-            <CheckList items={trendyolItems} />
-          </MiniPanel>
-
-          
-            <MiniPanel icon={ExternalLink} title="جزئیات وارد کردن محصول از Trendyol">
-              <CheckList items={trendyolImportDetailItems} />
-            </MiniPanel>
-
-
-          <MiniPanel icon={Store} title="مدیریت دسته‌بندی و برند">
-            <CheckList items={categoryBrandItems} />
-          </MiniPanel>
-
-          <MiniPanel icon={SlidersHorizontal} title="مدیریت فیلترها">
-            <CheckList items={adminFilterItems} />
-          </MiniPanel>
-
-          <MiniPanel icon={ClipboardList} title="مدیریت سفارش‌ها">
-            <CheckList items={adminOrderItems} />
-          </MiniPanel>
-
-          <MiniPanel icon={BadgePercent} title="مدیریت تخفیف‌ها">
-            <CheckList items={discountItems} />
-          </MiniPanel>
-
-          <MiniPanel icon={MessageCircleQuestion} title="مدیریت Q&A و نظرات">
-            <CheckList items={qaReviewItems} />
-          </MiniPanel>
-
-          <MiniPanel icon={BookOpen} title="مدیریت بلاگ">
-            <CheckList items={blogItems} />
-          </MiniPanel>
-
-          <MiniPanel icon={Users} title="نقش‌ها و دسترسی‌ها">
-            <CheckList items={roleItems} />
-          </MiniPanel>
-
-          <MiniPanel icon={ImagePlus} title="مدیریت بنرها">
-            <CheckList items={bannerManagementItems} />
-          </MiniPanel>
-
-          <MiniPanel icon={Layers3} title="منوی کامل پنل ادمین">
-              <CheckList items={adminSidebarItems} />
-            </MiniPanel>
-
-
-        </div>
-      </section>
-
-            <section className="luna-ref-section">
+<section className="luna-ref-section">
   <SectionHeader
-    eyebrow="13.1"
-    title="جزئیات تکمیلی پنل ادمین"
-    text="این بخش‌ها باعث می‌شوند دمو برای برنامه‌نویس کامل‌تر شود و فقط به نام منوها محدود نباشد."
+    eyebrow="13"
+    title="ساختار کلی پنل ادمین"
+    text="این بخش فقط ساختار اصلی پنل ادمین و منوهای لازم را نشان می‌دهد. جزئیات فیلدها و قوانین اجرایی در بخش 13.1 آمده است تا موارد تکراری نشوند."
   />
 
   <div className="luna-ref-three-col">
-    <MiniPanel icon={BarChart3} title="داشبورد ادمین">
-      <CheckList items={adminDashboardItems} />
+    <MiniPanel icon={Layers3} title="منوی اصلی پنل ادمین">
+      <CheckList items={adminMenuStructureItems} />
+    </MiniPanel>
+
+    <MiniPanel icon={Package} title="مدیریت کاتالوگ فروشگاه">
+      <CheckList items={adminCatalogStructureItems} />
+    </MiniPanel>
+
+    <MiniPanel icon={ClipboardList} title="مدیریت فروش و سفارش‌ها">
+      <CheckList items={adminSalesStructureItems} />
+    </MiniPanel>
+
+    <MiniPanel icon={BookOpen} title="مدیریت محتوا و تعامل کاربران">
+      <CheckList items={adminContentStructureItems} />
+    </MiniPanel>
+
+    <MiniPanel icon={Users} title="کاربران و سطح دسترسی">
+      <CheckList items={adminPeopleStructureItems} />
+    </MiniPanel>
+
+    <MiniPanel icon={Settings} title="تنظیمات اصلی سیستم">
+      <CheckList items={adminSystemStructureItems} />
+    </MiniPanel>
+  </div>
+</section>
+
+<section className="luna-ref-section">
+  <SectionHeader
+    eyebrow="13.1"
+    title="جزئیات اجرایی پنل ادمین"
+    text="این بخش جزئیات فرم‌ها، فیلدها، قوانین و رفتارهای ضروری داخل صفحات پنل ادمین را نشان می‌دهد."
+  />
+
+  <div className="luna-ref-three-col">
+    <MiniPanel icon={Edit3} title="افزودن محصول دستی">
+      <CheckList items={manualProductFormItems} />
+    </MiniPanel>
+
+    <MiniPanel icon={ListFilter} title="لیست محصولات در پنل ادمین">
+      <CheckList items={productListAdminItems} />
+    </MiniPanel>
+
+    <MiniPanel icon={ExternalLink} title="وارد کردن محصول از Trendyol">
+      <CheckList items={trendyolImportDetailItems} />
     </MiniPanel>
 
     <MiniPanel icon={Package} title="جزئیات بیشتر مدیریت محصول">
       <CheckList items={adminProductDetailItems} />
     </MiniPanel>
 
-    <MiniPanel icon={Users} title="مدیریت کاربران">
-      <CheckList items={adminUserManagementItems} />
+    <MiniPanel icon={SlidersHorizontal} title="مدیریت اندازه‌ها / سایزها">
+      <CheckList items={sizeManagementItems} />
+    </MiniPanel>
+
+    <MiniPanel icon={ImagePlus} title="مدیریت بنرها">
+      <CheckList items={bannerManagementItems} />
     </MiniPanel>
 
     <MiniPanel icon={ClipboardList} title="جزئیات کامل سفارش برای ادمین">
@@ -1360,6 +1265,10 @@ export default function LunaReferencePage() {
 
     <MiniPanel icon={BarChart3} title="گزارش درآمد">
       <CheckList items={adminIncomeReportItems} />
+    </MiniPanel>
+
+    <MiniPanel icon={Users} title="مدیریت کاربران">
+      <CheckList items={adminUserManagementItems} />
     </MiniPanel>
 
     <MiniPanel icon={Bell} title="اعلان‌های ادمین">
@@ -1373,21 +1282,9 @@ export default function LunaReferencePage() {
     <MiniPanel icon={Settings} title="جزئیات تنظیمات فروشگاه">
       <CheckList items={adminSettingDetailItems} />
     </MiniPanel>
-
-      <MiniPanel icon={SlidersHorizontal} title="مدیریت اندازه‌ها / سایزها">
-        <CheckList items={sizeManagementItems} />
-      </MiniPanel>
-
-      <MiniPanel icon={ImagePlus} title="مدیریت بنرها">
-        <CheckList items={bannerManagementItems} />
-      </MiniPanel>
-
-      <MiniPanel icon={Layers3} title="منوی کامل پنل ادمین">
-        <CheckList items={adminSidebarItems} />
-      </MiniPanel>
-
   </div>
 </section>
+
 
       <section className="luna-ref-section">
         <SectionHeader
@@ -1460,7 +1357,7 @@ export default function LunaReferencePage() {
 
           <div className="luna-ref-socials">
             <span>
-              <Instagram size={18} />
+              <Camera size={18} />
               اینستاگرام
             </span>
             <span>
