@@ -8,7 +8,7 @@ import Collections from "@/components/home/Collections";
 import NewProducts from "@/components/home/NewProducts";
 import ArticlesPreview from "@/components/home/ArticlesPreview";
 import { bestSellerProducts, offerProducts } from "@/data/home";
-
+import Link from "next/link";
 
 export default function HomePage() {
   return (
@@ -16,6 +16,25 @@ export default function HomePage() {
       <Header />
 
       <main>
+
+        <section className="developer-note-banner" dir="rtl">
+  <div className="developer-note-content">
+    <div>
+      <span className="developer-note-label">برای برنامه‌نویس</span>
+      <h2>یادداشت‌هایی برای برنامه‌نویس عزیز</h2>
+      <p>
+        برای مشاهده کامل تنظیمات، تغییرات مورد نیاز، پنل کاربر، پنل ادمین، رنگ‌ها،
+        امکانات لازم، موارد حذف‌شده و باگ‌های سایت لونا، صفحه رفرنس زیر را بررسی کنید.
+      </p>
+    </div>
+
+    <Link href="/luna-reference" className="developer-note-button">
+      مشاهده صفحه تنظیمات و تغییرات سایت لونا
+    </Link>
+  </div>
+</section>
+
+
         <HeroSlider />
         <CategoryShortcuts />
         <Advantages />
