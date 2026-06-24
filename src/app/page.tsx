@@ -20,7 +20,7 @@ export default function HomePage() {
         <section className="developer-note-banner" dir="rtl">
   <div className="developer-note-content">
     <div>
-      <span className="developer-note-label">برای برنامه‌نویس</span>
+      <span className="developer-note-label">برای آقای اصغری </span>
       <h2>یادداشت‌هایی برای برنامه‌نویس عزیز</h2>
       <p>
         برای مشاهده کامل تنظیمات، تغییرات مورد نیاز، پنل کاربر، پنل ادمین، رنگ‌ها،
