@@ -17,14 +17,14 @@ export default function HomePage() {
 
       <main>
 
-        <section className="developer-note-banner" dir="rtl">
+       <section className="developer-note-banner" dir="rtl">
   <div className="developer-note-content">
     <div>
-      <span className="developer-note-label">برای آقای اصغری </span>
-      <h2>یادداشت‌هایی برای عزیز</h2>
+      <span className="developer-note-label">برای برنامه‌نویس</span>
+      <h2>یادداشت‌هایی برای آقای اصغری عزیز</h2>
       <p>
         برای مشاهده کامل تنظیمات، تغییرات مورد نیاز، پنل کاربر، پنل ادمین، رنگ‌ها،
-        امکانات لازم، موارد حذف‌شده و باگ‌های سایت لونا، صفحه رفرنس زیر را بررسی کنید.
+        امکانات لازم، موارد حذف‌شده و باگ‌های سایت لونا، این صفحه را بررسی کنید.
       </p>
     </div>
 
@@ -33,7 +33,6 @@ export default function HomePage() {
     </Link>
   </div>
 </section>
-
 
         <HeroSlider />
         <CategoryShortcuts />
