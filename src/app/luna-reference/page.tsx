@@ -199,6 +199,7 @@ const searchSuggestions = [
 ];
 
 const productPageItems: Feature[] = [
+  { title: "وزن محصول برای محاسبه ارسال و کارگو", icon: Package },
   { title: "گالری عکس محصول", icon: ImagePlus },
   { title: "نام محصول و برند", icon: Store },
   { title: "قیمت تومان و قیمت لیر در صورت نیاز", icon: CircleDollarSign },
@@ -406,6 +407,99 @@ const productManagementItems = [
   "فعال یا غیرفعال کردن محصول",
 ];
 
+const manualProductFormItems = [
+  "عنوان محصول",
+  "اسلاگ محصول",
+  "توضیحات محصول",
+  "قیمت تومان",
+  "قیمت پایه برای محاسبه تخفیف",
+  "ارز پایه: تومان، لیر یا دلار",
+  "وضعیت موجودی",
+  "برند",
+  "دسته‌بندی",
+  "منبع محصول: دستی، Trendyol یا Amazon",
+  "لینک منبع محصول در صورت وجود",
+  "تصویر اصلی محصول",
+  "گالری تصاویر محصول با جداکننده کاما",
+  "ویژگی‌های پیشرفته به صورت JSON",
+  "وزن محصول برای محاسبه ارسال و کارگو",
+  "فعال یا غیرفعال کردن محصول",
+];
+
+const productListAdminItems = [
+  "نمایش تعداد کل محصولات",
+  "نمایش تعداد محصولات دستی",
+  "نمایش تعداد محصولات Trendyol یا Amazon",
+  "جستجوی محصول با نام محصول",
+  "فیلتر بر اساس منبع محصول",
+  "دکمه افزودن محصول جدید",
+  "دکمه وارد کردن محصول از Trendyol",
+  "نمایش عنوان محصول",
+  "نمایش قیمت",
+  "نمایش منبع محصول",
+  "دکمه ویرایش محصول",
+];
+
+const trendyolImportDetailItems = [
+  "فیلد وارد کردن لینک محصول Trendyol",
+  "دکمه دریافت اطلاعات",
+  "دریافت عنوان محصول",
+  "دریافت عکس محصول",
+  "دریافت برند",
+  "دریافت قیمت لیر",
+  "دریافت توضیحات محصول",
+  "نمایش پیام خطای ترجمه در صورت مشکل",
+  "نمایش متن اصلی ترکی در صورت خطای ترجمه",
+  "تشخیص اینکه محصول احتمالاً مرتبط با اتاق خواب هست یا نه",
+  "نمایش امتیاز مرتبط بودن محصول",
+  "امکان ویرایش همه اطلاعات قبل از ذخیره",
+  "امکان تغییر دسته‌بندی و برند قبل از ذخیره",
+  "امکان تعیین وزن و هزینه ارسال قبل از ذخیره",
+];
+
+const sizeManagementItems = [
+  "مدیریت سایزها به عنوان فیلتر",
+  "افزودن سایز جدید",
+  "ویرایش سایز",
+  "حذف سایز",
+  "فعال یا غیرفعال کردن سایز",
+  "اتصال سایز به دسته‌بندی مربوطه",
+  "نمایش سایز در فرم افزودن محصول",
+  "سایز نباید یک سیستم جدا و پیچیده باشد؛ باید زیرمجموعه مدیریت فیلترها باشد",
+];
+
+const bannerManagementItems = [
+  "افزودن بنر جدید",
+  "ویرایش بنر",
+  "حذف بنر",
+  "تصویر بنر",
+  "عنوان بنر",
+  "موقعیت نمایش مثل home_top",
+  "ترتیب نمایش",
+  "وضعیت فعال یا غیرفعال",
+  "تاریخ شروع و پایان در صورت نیاز",
+  "نمایش بنر در صفحه اصلی یا بخش‌های مشخص سایت",
+];
+
+const adminSidebarItems = [
+  "داشبورد",
+  "محصولات",
+  "دسته‌بندی‌ها",
+  "برندها",
+  "اندازه‌ها / سایزها",
+  "فیلترها",
+  "سفارش‌ها",
+  "تخفیف‌ها",
+  "سوالات و پاسخ‌ها",
+  "نظرات",
+  "بلاگ",
+  "بنرها",
+  "کاربران",
+  "بازگشت به صفحه اصلی",
+  "خروج از حساب",
+];
+
+
 const trendyolItems = [
   "وارد کردن لینک محصول Trendyol",
   "دریافت عنوان محصول",
@@ -550,6 +644,14 @@ const bugItems = [
   "در صورت لغو یا مرجوعی، درآمد باید اصلاح شود",
   "جستجوی سفارش‌ها در پنل ادمین نباید وسط تایپ کاربر را قطع کند",
   "کاربر مهمان باید بتواند مسیر ثبت پرسش را واضح ببیند",
+"فرم افزودن محصول دستی باید همه فیلدهای لازم مثل قیمت، موجودی، برند، دسته‌بندی، تصویر، گالری، منبع، لینک منبع، ویژگی‌ها و وزن محصول را داشته باشد",
+"در وارد کردن محصول از Trendyol اگر ترجمه انجام نشد، متن اصلی محصول نمایش داده شود و خطا واضح باشد",
+"سیستم باید تشخیص دهد محصول واردشده از Trendyol مرتبط با فضای اتاق خواب و لونا هست یا نه",
+"دسته‌بندی‌های پیش‌فرض نامرتبط مثل اسباب‌بازی، الکترونیک، خودرو و کتاب باید برای سایت لونا حذف یا اصلاح شوند",
+"پنل ادمین باید به جای Luna Bedroom Admin بهتر است با نام لونا / LUNA نمایش داده شود",
+"رنگ نارنجی شدید فعلی پنل ادمین باید با رنگ‌های گرم و Soft Premium لونا جایگزین شود",
+
+
 ];
 
 const adminDashboardItems = [
@@ -1174,9 +1276,23 @@ export default function LunaReferencePage() {
             <CheckList items={productManagementItems} />
           </MiniPanel>
 
+          <MiniPanel icon={Edit3} title="افزودن محصول دستی">
+             <CheckList items={manualProductFormItems} />
+          </MiniPanel>
+
+            <MiniPanel icon={ListFilter} title="لیست محصولات در پنل ادمین">
+              <CheckList items={productListAdminItems} />
+            </MiniPanel>
+
           <MiniPanel icon={ExternalLink} title="افزودن محصول از Trendyol">
             <CheckList items={trendyolItems} />
           </MiniPanel>
+
+          
+            <MiniPanel icon={ExternalLink} title="جزئیات وارد کردن محصول از Trendyol">
+              <CheckList items={trendyolImportDetailItems} />
+            </MiniPanel>
+
 
           <MiniPanel icon={Store} title="مدیریت دسته‌بندی و برند">
             <CheckList items={categoryBrandItems} />
@@ -1205,6 +1321,16 @@ export default function LunaReferencePage() {
           <MiniPanel icon={Users} title="نقش‌ها و دسترسی‌ها">
             <CheckList items={roleItems} />
           </MiniPanel>
+
+          <MiniPanel icon={ImagePlus} title="مدیریت بنرها">
+            <CheckList items={bannerManagementItems} />
+          </MiniPanel>
+
+          <MiniPanel icon={Layers3} title="منوی کامل پنل ادمین">
+              <CheckList items={adminSidebarItems} />
+            </MiniPanel>
+
+
         </div>
       </section>
 
@@ -1247,6 +1373,19 @@ export default function LunaReferencePage() {
     <MiniPanel icon={Settings} title="جزئیات تنظیمات فروشگاه">
       <CheckList items={adminSettingDetailItems} />
     </MiniPanel>
+
+      <MiniPanel icon={SlidersHorizontal} title="مدیریت اندازه‌ها / سایزها">
+        <CheckList items={sizeManagementItems} />
+      </MiniPanel>
+
+      <MiniPanel icon={ImagePlus} title="مدیریت بنرها">
+        <CheckList items={bannerManagementItems} />
+      </MiniPanel>
+
+      <MiniPanel icon={Layers3} title="منوی کامل پنل ادمین">
+        <CheckList items={adminSidebarItems} />
+      </MiniPanel>
+
   </div>
 </section>
 
